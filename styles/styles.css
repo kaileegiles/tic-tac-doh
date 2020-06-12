@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+/* Resets */
+
+/* Box Sizing Reset */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*  Responsive Image Reset  */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Type Styles */
+
+@font-face {
+    font-family: 'simpsons';
+    src: url(../fonts/simpsonfont/Simpsonfont\ DEMO.otf);
+}
+
+@font-face {
+    font-family: 'homer';
+    src: url(../fonts/Homer_Simpson_Revised.ttf);
+}
+
+.splash {
+    /* Background image courtesy of: http://getwallpapers.com/collection/the-simpsons-wallpaper-for-desktop */
+    display: flex;
+    height: 100vh ;
+    background-image: url(../images/splash-background.jpg);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 1.2s ease-out;
+}
+
+.show-game-screen {
+    transform: translateY(-100%);
+}
+
+.splash-content {
+    background-color: #fed420;
+    padding: 20px 50px 50px 50px;
+    box-shadow: 5px 10px 20px black;
+    max-width: 300px;
+}
+
+.splash-content h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.splash-content p {
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'homer';
+    font-size: 20px;
+    padding-bottom: 35px;
+    padding-top: 10px;
+
+}
+
+.btn-remove-splash {
+    padding: 10px;
+    background-color: #fed420;
+    box-shadow: 5px 10px 20px black;
+}
+
+.splash-content a {
+    text-decoration: none;
+    color: black;
+    font-family: 'simpsons';
+    font-size: 25px;
+    cursor: pointer;
+}
+
+ 
+body {
+    background-image: url(../images/clouds-background.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    font-family: 'simpsons';
+    font-size: 50px;
+    color: black;
+    text-shadow: 5px 5px 0px #fed420;
+    text-align: center;
+    margin: 30px 0 40px 0;
+}
+
+.apostrophe {
+    font-family: 'homer';
+}
+
+.game-board {
+    height: 100vh;
+    padding-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.tables {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.yellow {
+    max-width: 690px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+}
+
+.yellow td {
+    height: 100px;
+    width: 100px;
+    border: 15px solid #fed420;
+    cursor: pointer;
+}
+
+.black {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.black td {
+    height: 100px;
+    width: 100px;
+    border-bottom: 15px solid black;
+    border-right: 15px solid black;
+    cursor: pointer;
+}
+
+.yellow tr:first-child td {
+    border-top: 0;
+}
+
+.yellow tr:last-child td {
+    border-bottom: 0;
+}
+
+.yellow tr td:first-child {
+    border-left: 0;
+}
+
+.yellow tr td:last-child {
+    border-right: 0;
+}
+
+.black tr td:first-child {
+    border-left: 0;
+}
+
+.black tr td:last-child {
+    border-right: 0;
+}
+
+.black tr:last-child td {
+    border-bottom: 0;
+}
+
+.cell img {
+    max-width: 70px;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+
+.card-container {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    top: -490px;
+    margin: 0 auto;
+
+}
+
+.endgame {
+    display: none;
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fed420;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 5px 10px 20px black;
+    z-index: 9999;
+}
+
+.text {
+    color: black;
+    font-size: 3.1em;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'simpsons';
+    line-height: 1.1em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+button {
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    border: none;
+    background-color: black;
+    box-shadow: 5px 10px 20px black;
+    top: 150px;
+    left: 75px;
+    font-family: 'simpsons';
+    font-size: 20px;
+    color: white;
+}
+
+@media (min-width: 600px) {
+
+    .splash-content {
+        max-width: 500px;
+    }
+
+    .splash-content h1 {
+        font-size: 60px;
+    }
+
+    .splash-content p {
+        font-size: 25px;
+    }
+
+    .card-container, .endgame {
+        width: 400px;
+        height: 280px;
+    }
+
+    .card-container {
+        top: -450px;
+    }
+
+    .game-board {
+        width: 500px;
+        padding-top: 10px;
+    }
+
+    .black td, .yellow td {
+        height: 150px;
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    .text {
+        max-width: 300px;
+    }
+
+    button {
+        top: 170px;
+        left: 127px;
+    }
+
+    .cell img {
+        max-width: 120px;
+        margin-top: 10px;
+        margin-left: 7px;
+    }
+
+}

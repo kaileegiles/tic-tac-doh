@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43968945-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-43968945-2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Game - Tic Tac D'oh!</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="splash">
+        <div class="splash-content">
+            <h1>Tic Tac D<span class="apostrophe">'</span>oh!</h1>
+            <p>This game is enjoyed best with sound on. Turn it up!</p>
+            <a class="btn btn-remove-splash"
+            id="btn-remove-splash" 
+            href="#h1" onclick="theme.play()">Start Game</a>
+        </div>
+    </div> <!--end splash-->
+    <div class="wrapper">
+        <div class="game-board">
+            <h1 id="h1">Tic Tac D<span class="apostrophe">'</span>oh!</h1>
+            <div class="tables">
+                <table class="yellow">
+                    <tr>
+                        <td class="cell" id="0"></td>
+                        <td class="cell" id="1"></td>
+                        <td class="cell" id="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="3"></td>
+                        <td class="cell" id="4"></td>
+                        <td class="cell" id="5"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="6"></td>
+                        <td class="cell" id="7"></td>
+                        <td class="cell" id="8"></td>
+                    </tr>
+                </table>
+                <table class="black">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div><!--end tables-->
+        </div><!--end game-board-->
+    </div><!--end wrapper-->
+    <div class="card-container">
+        <div class="endgame" id="endgame">
+            <div class="text" id="text"></div>
+            <button onClick="startGame()">Play again</button>
+        </div><!--end endgame-->
+    </div><!--end card-container-->
+    <audio src="media/music/champion.mp3" id="champion"></audio>
+    <audio src="media/music/doh1.mp3" id="doh"></audio>
+    <audio src="media/music/boring.mp3" id="boring"></audio>
+<script src="scripts/game.js"></script>
+</body>
+</html>
